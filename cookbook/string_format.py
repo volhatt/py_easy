@@ -41,4 +41,21 @@ redacted = [''.join('X' if w.isdigit() else w for w in word) for word in words]
 # Transform the text into pure ASCII
 ascii_text = [word.encode('ascii', errors='replace').decode('ascii')
               for word in redacted]
-print(ascii_text)
+
+# Group the words onto 80-characters lines:
+newlines = [word + '\n' if word.endswith('.') else word for word in ascii_text]
+LINE_SIZE = 80
+lines = []
+line = ''
+# lines is array of line that are 80 chars long
+for word in newlines:
+    if line.endswith('\n') or len(line) + len(word) + 1 > LINE_SIZE:
+        lines.append(line)
+        line = ''
+    line = line + ' ' + word
+    
+# Format all lines as titles and join them as a single piece of text:
+lines = [line.title() for line in lines]
+result = '\n'.join(lines)
+
+print(result)
