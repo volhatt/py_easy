@@ -27,9 +27,11 @@ print(timestamp_string, _, product_string, price_string)
 print('timestamp - ', timestamp)
 print(product_string, ' - ' , product_id)
 print('price - ', type(price), price)
+
 print('timestamp         product_id          price')
 print(timestamp, product_id, price)
-
+# timestamp         product_id          price
+# Delorean(datetime=datetime.datetime(2018, 5, 5, 11, 7, 12, 267897), timezone='UTC') 1345 9.99
 ''' OUTPUT 
 log -  [2018-05-05T11:07:12.267897] - SALE - PRODUCT: 1345 - PRICE: $09.99
 divide_it -  ['[2018-05-05T11:07:12.267897]', 'SALE', 'PRODUCT: 1345', 'PRICE: $09.99']
@@ -49,7 +51,8 @@ class PriceLog(object):
         self.product_id = product_id
         self.price = price
     def __repr__(self):
-        return '<PriceLog ({}, {}, {})>'.format(self.timestamp, self.product_id, self.price)
+        # return '<PriceLog ({}, {}, {})>'.format(self.timestamp, self.product_id, self.price)
+        return f"<PriceLog ({self.timestamp}, {self.product_id}, {self.price})>"
 
     @classmethod
     def parse(cls, text_log):
