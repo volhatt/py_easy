@@ -36,12 +36,12 @@ fizzbuzz = [fizz_or_buzz(num) for num in range (1, 101)]
 total_numbers = range(1, 101)
 
 fizzbuzzes = {
-    'fizz' = [n for n in total_numbers if n % 3 == 0],
-    'buzz' - [n for n in total_numbers if n % 7 == 0]
+    'fizz': [n for n in total_numbers if n % 3 == 0],
+    'buzz': [n for n in total_numbers if n % 7 == 0]
 }
 
 # {'fizz': [3, 6, 9, 12, 15, 18, 21], 'buzz': [7, 14, 21]}
-fb = { key: set(value) for key, value in fizzbuzzes.items()}
+fb = { key: set(value) for key, value in fizzbuzzes.items() }
 # {'fizz': {3, 6, 9, 12, 15, 18, 21}, 'buzz': {21, 14, 7}}
 
 fb['fizzbuzz'] = {n for n in fb['fizz'].intersection(fb['buzz'])}
