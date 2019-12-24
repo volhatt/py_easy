@@ -50,4 +50,4 @@ print(" - " * 20)
 # if person celebrates their BD and their age is 10 or less print out name and 
 # as many stars as their age 
 print("Starts:")
-print(*[f"{person[0]}  {'* ' * person[3] }\n" for person in BIRTHDAYS if person[2]], sep='')
+print(*[f"{person[0]}  {'* ' * person[3] }\n" for person in BIRTHDAYS if person[2] and person[3] < 10], sep='')
