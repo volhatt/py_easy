@@ -115,3 +115,6 @@ def nested_sum(arr):
 
 all_sum = [nested_sum(i) for i in hourglasses]
 print(max(all_sum))
+
+## everything could be done with 1 line of code but code above is not depending on numbers of rows in array
+print(max(sum(a[i][j:j+3] + [ a[i+1][j+1] ] + a[i+2][j:j+3]) for i in range(4) for j in range(4)))
