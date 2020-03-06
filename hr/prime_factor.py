@@ -25,11 +25,28 @@ def primeFactors(n):
             n = n / i
             # print(n)
     # check if last n is a prime number and add it to array
+    # we already knows that i < math.sqrt(n) , otherwise check if number is prime should include range ( 2 , math.sqrt(n))
+    """ eg. how to check if number is a prime
+    def is_prime(n):
+	    if(n > 1):
+		    for i in range(2, int(math.sqrt(n))):
+			    if n % 1 == 0:
+				    return False
+	    if n <= 1:
+		    return False
+	    else:
+		    return True
+    """
     if n > 2:
         prime_factors.append(int(n))
     
 
     return prime_factors
+
+def all_divisors(n):
+    pass
+
+
 
 print(primeFactors(100))
 # output
