@@ -2,7 +2,7 @@
 """
 Created on Wed Dec 18 12:28:36 2019
 
-@author: okamene
+@author: kameneva
 """
 # columns: Name, Day/Month, Celebrates, Age
 BIRTHDAYS = (
