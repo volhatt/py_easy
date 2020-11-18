@@ -32,7 +32,7 @@ fizzbuzz = [fizz_or_buzz(num) for num in range (1, 101)]
 
 
 
-# eg 3 - is not finished
+# eg 3 - is not finished and is not correct
 total_numbers = range(1, 101)
 
 fizzbuzzes = {
