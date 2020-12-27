@@ -1,4 +1,5 @@
-# implement int sqrt(int x)
+# TEMPLATE #1
+#  implement int sqrt(int x)
 # compute and return the square root of x, where x is garanteed to be a non-negative integer.
 class Solition:
 
