@@ -1,6 +1,6 @@
 # TEMPLATE #2 example
 # A peak element is an element that is greater than its neighbors.
-# my solution  beats 65:
+# my solution  beats 65%:
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         if len (nums) == 0:
