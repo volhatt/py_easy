@@ -37,12 +37,9 @@ class Solution:
                     left = mid
                 else:
                     right = mid
-            
-            
             else:
                 return nums[mid]
-
-
+        # post processing ( required , loop ends when 1 element left ) ?
 
     # TEST 
     nums = [4,5,6,7,0,1,2]
